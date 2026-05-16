@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var devices = [];
+      var input = prompt("Type Keyboard");
+      devices.push(input);
+      var input = prompt("Type mouse");
+
+      devices.push(input);
+      var input = prompt("Type printer");
+
+      devices.push(input);
+      var input = prompt("Type monitor");
+
+      devices.push(input);
+
+      document.write("<b>Devices:</b><br>" + devices + "<br><br>");
+      document.write("<b>Out:</b><br>" + devices.pop() + "<br>");
+      document.write("<b>Out:</b><br>" + devices.pop() + "<br>");
+      document.write("<b>Out:</b><br>" + devices.pop() + "<br>");
+      document.write("<b>Out:</b><br>" + devices.pop() + "<br>");
+    </script>
+  </body>
+</html>
