@@ -3,7 +3,423 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>JS CH 14-16</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background: #f4f4f4;
+        padding: 20px;
+      }
+      .container {
+        max-width: 950px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 10px;
+      }
+      .q-box {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        background: #fff;
+      }
+      .q-title {
+        font-weight: bold;
+        color: #007bff;
+        margin-bottom: 10px;
+        display: block;
+        text-align: center;
+      }
+
+      .ex {
+        font-weight: bold;
+        color: #007bff;
+        margin-bottom: 10px;
+        display: block;
+        text-align: left;
+      }
+      pre {
+        background: #272822;
+        color: #f8f8f2;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+      .run-btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 15px;
+        background: #28a745;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .run-btn:hover {
+        background: #218838;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h1>JavaScript Assignment Chapters (14-16)</h1>
+      <p style="text-align: center">
+        Click <b>Run Code</b> below each question to view the output in a new
+        tab.
+      </p>
+
+      <div class="q-box">
+        <span class="q-title">
+          1. Declare an empty array using JS literal notation to store student
+          names in future.
+        </span>
+        <pre><code>var studentNames = [];</code></pre>
+        <a href="q1.html" target="_blank">
+          <div class="run-btn">Run Code</div></a
+        >
+      </div>
+
+      <div class="q-box">
+        <span class="q-title">
+          2. Declare an empty array using JS object notation to store student
+          names in future.
+        </span>
+        <pre><code>var studentNames = new Array();</code></pre>
+        <a href="q2.html" target="_blank"
+          ><div class="run-btn">Run Code</div></a
+        >
+      </div>
+
+      <div class="q-box">
+        <span class="q-title"> 3. Declare and initialize a strings array.</span>
+        <pre><code>var fruits = ["Smit", "Saylani", "IT"];</code></pre>
+        <a href="q3.html" target="_blank"
+          ><div class="run-btn">Run Code</div></a
+        >
+      </div>
+
+      <div class="q-box">
+        <span class="q-title">4. Declare and initialize a numbers array. </span>
+        <pre><code>var scores = [33, 12, 100];</code></pre>
+        <a href="q4.html" target="_blank"
+          ><span class="run-btn">Run Code</span></a
+        >
+      </div>
+
+      <div class="q-box">
+        <span class="q-title">5. Declare and initialize a boolean array.</span>
+        <pre><code>var results = [true, false, true];</code></pre>
+        <a href="q5.html" target="_blank"
+          ><div class="run-btn">Run Code</div></a
+        >
+      </div>
+
+      <div class="q-box">
+        <span class="q-title">6. Declare and initialize a mixed array. </span>
+        <pre><code>var mixedData = ["Shahbaz", 24, true];</code></pre>
+        <a href="q6.html" target="_blank"
+          ><div class="run-btn">Run Code</div></a
+        >
+      </div>
+
+      <div class="q-box">
+        <span class="q-title"
+          >7. Declare and Initialize an array and store available education
+          qualifications in Pakistan (e.g. SSC, HSC, BCS, BS, BCOM, MS, M.
+          Phil., PhD). Show the listed qualifications in your browser like:
+        </span>
+        <pre><code>var qualifications = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M. Phil.", "PhD"];
+
+document.write("<h3>Qualifications:</h3>"); 
+for (var i = 0; i < qualifications.length; i++) {
+    document.write((i + 1) + ") " + qualifications[i] + "<br>"); 
+}</code></pre>
+        <a href="q7.html" target="_blank"
+          ><div class="run-btn">Run Code</div></a
+        >
+      </div>
+
+      <div class="q-box">
+        <span class="q-title"
+          >8. Write a program to store 3 student names in an array.Take another
+          array to store score of these three students. Assume that total marks
+          are 500 for each student, display the scores & percentages of students
+          like:
+        </span>
+        <pre><code>var students = ["Michael", "John", "Tony"];
+var marks = [320, 230, 480];
+
+for (var i = 0; i < students.length; i++) {
+  var percentage = (marks[i] / 500) * 100;
+  
+  
+  document.write(
+    "<h3>Score of " + students[i] + " is " + marks[i] + ". Percentage: " + percentage + "%<br></h3>"
+  );
+}</code></pre>
+        <a href="q8.html" target="_blank"
+          ><div class="run-btn">Run Code</div></a
+        >
+      </div>
+
+      <div class="q-box">
+        <span class="q-title"
+          >9. Initialize an array with color names. Display the array elements
+          in your browser.
+          <div style="text-align: justify; margin-left: 28px; line-height: 3">
+            <br />A: Ask the user what color he/she wants to add to the
+            beginning & add that color to the beginning of the array. Display
+            the updated array in your browser.<br />B: Ask the user what color
+            he/she wants to add to the end & add that color to the end of the
+            array. Display the updated array in your browser.<br />C: Add two
+            more color to the beginning of the array. Display the updated array
+            in your browser.<br />D: Delete the first color in the array.
+            Display the updated array in your browser. <br />E: Delete the last
+            color in the array. Display the updated array in your browser.
+            <br />F: Ask the user at which index he/she wants to add a color &
+            color name. Then add the color to desired position/index. . Display
+            the updated array in your browser. <br />G: Ask the user at which
+            index he/she wants to delete color(s) & how many colors he/she wants
+            to delete. Then remove the same number of color(s) from user-defined
+            position/index. . Display the updated array in your browser.
+          </div>
+        </span>
+        <pre><code>
+9:
+
+          var colors = ["Red", "Green", "Blue"];
+          document.write(colors + "<br>");
+
+
+a:
+          var colors = ["Red", "Green", "Blue"];
+          var colorToStart = prompt("Enter a color to add to the beginning:");
+          colors.unshift(colorToStart); 
+          document.write(colors + "<br>");
+
+
+b:
+          var colors = ["Red", "Green", "Blue"];
+          var colorToEnd = prompt("Enter a color to add to the end:");
+          colors.push(colorToEnd); 
+          document.write(colors + "<br>");
+
+
+c:
+          var colors = ["Red", "Green", "Blue"];
+          var colorToStart = prompt("Enter first color to add to the beginning:");
+          colors.unshift(colorToStart); 
+          var colorToStart = prompt("Enter Second color to add to the beginning:");
+          colors.unshift(colorToStart); 
+          document.write(colors + "<br>");
+
+
+d:
+          var colors = ["Red", "Green", "Blue"];
+          colors.shift();
+          document.write(colors + "<br>");     
+          
+
+e:
+          var colors = ["Red", "Green", "Blue"];
+          colors.pop();
+          document.write(colors + "<br>");    
+       
+          
+f:
+          var colors = ["Red", "Green", "Blue"];
+          var index = prompt("At which index do you want to add a color?");
+          var colorName = prompt("Enter the color name:");
+          colors.splice(index, 0, colorName);
+          document.write("<b>index No: " + index + ":</b> " + colors + "<br>"); 
+          
+
+g:
+          var colors = ["Red", "Green", "Blue"];
+          var index = prompt("At which index do you want to delete color?");
+          var deleted = prompt("How many colors do you want to delete?");
+          colors.splice(index, deleted);
+          document.write(
+          "<b>Deleting from index " + index + ":</b> " + colors + "<br>",
+          );
+</code></pre>
+        <a href="q9a.html" target="_blank"
+          ><span class="run-btn">a. Run Code</span></a
+        >
+        <a href="q9b.html" target="_blank"
+          ><span class="run-btn">b. Run Code</span></a
+        >
+        <a href="q9c.html" target="_blank"
+          ><span class="run-btn">c. Run Code</span></a
+        >
+        <a href="q9d.html" target="_blank"
+          ><span class="run-btn">d. Run Code</span></a
+        >
+        <a href="q9e.html" target="_blank"
+          ><span class="run-btn">e. Run Code</span></a
+        >
+        <a href="q9f.html" target="_blank"
+          ><span class="run-btn">f. Run Code</span></a
+        >
+        <a href="q9g.html" target="_blank"
+          ><span class="run-btn">g. Run Code</span></a
+        >
+      </div>
+
+      <div class="q-box">
+        <span class="q-title"
+          >10. Write a program to store student scores in an array & sort the
+          array in ascending order using Array’s sort method.
+        </span>
+        <pre><code>var studentScores = [320, 230, 480, 120];
+      document.write(
+        "<h3>" + "Scores of Students: " + studentScores + "<br>" + "</h3>",
+      );
+
+      studentScores.sort();
+
+      document.write(
+        "<h3>" +
+          "Ordered Scores of Students: " +
+          studentScores +
+          "<br>" +
+          "</h3>",
+      );</code></pre>
+        <a href="q10.html" target="_blank"
+          ><div class="run-btn">Run Code</div></a
+        >
+      </div>
+
+      <div class="q-box">
+        <span class="q-title"
+          >11. Write a program to initialize an array with city names. Copy 3
+          array elements from cities array to selectedCities array.
+        </span>
+        <pre><code>var cities = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar"];
+      document.write("<h3>Cities list:</h3>" + cities + "<br>");
+
+      var selectedCities = cities.slice(2, 4);
+
+      document.write(
+        "<h3>Selected cities list:</h3>" + selectedCities + "<br>",
+      );</code></pre>
+        <a href="q11.html" target="_blank"
+          ><div class="run-btn">Run Code</div></a
+        >
+      </div>
+
+      <div class="q-box">
+        <span class="q-title"
+          >12. Write a program to create a single string from the below
+          mentioned array: var arr = [“This ”, “ is ”, “ my ”, “ cat”]; (Use
+          array’s join method)
+        </span>
+        <pre><code>var arr = ["This ", " is ", " my ", " cat"];
+      document.write("<b>Array:</b><br>" + arr + "<br><br>");
+
+      var singleString = arr.join("");
+
+      document.write("<b>String:</b><br>" + singleString + "<br>");</code></pre>
+        <a href="q12.html" target="_blank"
+          ><div class="run-btn">Run Code</div></a
+        >
+      </div>
+
+      <div class="q-box">
+        <span class="q-title"
+          >13. Create a new array. Store values one by one in such a way that
+          you can access the values in the order in which they were stored.
+          (FIFO-First In First Out)
+        </span>
+        <pre><code>var devices = [];
+      var input = prompt("Type Keyboard");
+      devices.push(input);
+      var input = prompt("Type mouse");
+
+      devices.push(input);
+      var input = prompt("Type printer");
+
+      devices.push(input);
+      var input = prompt("Type monitor");
+
+      devices.push(input);
+        
+      document.write("<b>Devices:</b><br>" + devices + "<br><br>");
+      document.write("<b>Out:</b><br>" + devices.shift() + "<br>");
+      document.write("<b>Out:</b><br>" + devices.shift() + "<br>");
+      document.write("<b>Out:</b><br>" + devices.shift() + "<br>");
+      document.write("<b>Out:</b><br>" + devices.shift() + "<br>");</code></pre>
+        <a href="q13.html" target="_blank"
+          ><div class="run-btn">Run Code</div></a
+        >
+      </div>
+
+      <div class="q-box">
+        <span class="q-title"
+          >14. Create a new array. Store values one by one in such a way that
+          you can access the values in reverse order. (Last InFirst Out)
+        </span>
+        <pre><code>var devices = [];
+      var input = prompt("Type Keyboard");
+      devices.push(input);
+      var input = prompt("Type mouse");
+
+      devices.push(input);
+      var input = prompt("Type printer");
+
+      devices.push(input);
+      var input = prompt("Type monitor");
+
+      devices.push(input);
+
+      document.write("<b>Devices:</b><br>" + devices + "<br><br>");
+      document.write("<b>Out:</b><br>" + devices.pop() + "<br>");
+      document.write("<b>Out:</b><br>" + devices.pop() + "<br>");
+      document.write("<b>Out:</b><br>" + devices.pop() + "<br>");
+      document.write("<b>Out:</b><br>" + devices.pop() + "<br>");</code></pre>
+        <a href="q14.html" target="_blank"
+          ><div class="run-btn">Run Code</div></a
+        >
+      </div>
+
+      <div class="q-box">
+        <span class="q-title"
+          >15. Write a program to store phone manufacturers (Apple, Samsung,
+          Motorola, Nokia, Sony & Haier) in an array. Display the following
+          dropdown/select menu in your browser using document.write() method:
+        </span>
+        <pre><code>
+          
+          var manufacturers = [
+        "Apple",
+        "Samsung",
+        "Motorola",
+        "Nokia",
+        "Sony",
+        "Haier",
+      ];
+
+      document.write("&lt;select&gt;");
+
+      for (var i = 0; i &lt; manufacturers.length; i++) {
+        document.write("&lt;option&gt;" + manufacturers[i] + "&lt;/option&gt;");
+      }
+
+     document.write("&lt;/select&gt;");
+    </code></pre>
+        <a href="q15.html" target="_blank"
+          ><div class="run-btn">Run Code</div></a
+        >
+      </div>
+    </div>
+  </body>
 </html>
