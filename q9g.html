@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var colors = ["Red", "Green", "Blue"];
+      var index = prompt("At which index do you want to delete color?");
+      var deleted = prompt("How many colors do you want to delete?");
+      colors.splice(index, deleted);
+      document.write(
+        "<b>Deleting from index " + index + ":</b> " + colors + "<br>",
+      );
+    </script>
+  </body>
+</html>

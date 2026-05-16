@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var students = ["Michael", "John", "Tony"];
+      var marks = [320, 230, 480];
+
+      for (var i = 0; i < students.length; i++) {
+        var percentage = (marks[i] / 500) * 100;
+
+        document.write(
+          "<h3>Score of " +
+            students[i] +
+            " is " +
+            marks[i] +
+            ". Percentage: " +
+            percentage +
+            "%<br></h3>",
+        );
+      }
+    </script>
+  </body>
+</html>
